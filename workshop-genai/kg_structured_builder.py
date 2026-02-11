@@ -1,3 +1,8 @@
+# PARTE 3. crea un grafo basado en datos de PDFs (no uno solo, sino todos, cuyos paths
+# contiene el csv que se da como parámetro, docs.csv)
+# Proporcionamos además de "clases"/node types, relaciones y qué nodos conectan
+# Ver NODE_TYPES, RELATIONSHIP_TYPES y PATTERNS
+
 import os
 from dotenv import load_dotenv
 load_dotenv()

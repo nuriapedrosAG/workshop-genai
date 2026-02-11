@@ -1,3 +1,10 @@
+# PARTE 2. crea un grafo basado en un texto 
+# que le proporcionamos en pdf (de temática LLMs)
+# Pero indicamos "clases" en NODE_TYPES que queremos que cree,
+# no se los inventa from scratch como en kg-builder.py.
+# Se consigue un grafo mucho más sofisticado porque estamos orientando al modelo
+# Podríamos proporcionar también relaciones y patterns (ver kg_sctructured_builder.py)
+
 import os
 from dotenv import load_dotenv
 load_dotenv()
@@ -19,7 +26,7 @@ neo4j_driver.verify_connectivity()
 llm = OpenAILLM(
     model_name="gpt-4o",
     model_params={
-        "temperature": 0,
+        "temperature": 0, 
         "response_format": {"type": "json_object"},
     }
 )

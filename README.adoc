@@ -6,3 +6,27 @@ For a complete walkthrough of this repository, link:https://graphacademy.neo4j.c
 
 link:https://codespaces.new/neo4j-graphacademy/workshop-genai[image:https://github.com/codespaces/badge.svg[Open in GitHub Codespaces]^]
 
+------ NURIA NOTES BELOW -------
+
+GENERACION AUTOMÁTICA DE GRAFO GRACIAS A LLMs
+
+    En este repo creamos grafos a partir de textos en un pdf (DATOS NO ESTRUCTURADOS), 
+    gracias a la ayuda de LLMs. 
+    Para eso se divide el texto en chunks (podemos modificar el nº de chunks)
+    Podemos dejarlo todo en manos del modelo (kg_builder.py)
+    U orientarlo y sofisticar el grafo, indicando nodos que debe contener (kg_builder_schema.py)
+    e incluso relaciones entre ellos (kg_structured_builder.py, en este documento, de hecho 
+    se crea el grafo a partir de todos los pdfs, cuyos paths están en un csv que se da como parámetro)
+
+
+USO DE GRAPH RAG Y EMBEDDING  
+
+    Consiste en que cuando se haga una pregunta al agente, el prompt es embedded (traducido
+    a una serie de números), se compara la similaridad con los embeddings que hay en el grafo,
+    y según la comparación se genera una respuesta adecuada
+
+    En vector_cypher_rag.py, damos un prompt y nos devuelve los chunks con un valor para 
+    la similaridad que tienen con nuestro prompt. 
+
+    En text2cypher_rag.py (complete later)
+

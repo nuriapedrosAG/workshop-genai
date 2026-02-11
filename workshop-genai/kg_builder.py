@@ -1,3 +1,5 @@
+# PARTE 1: Crea un grafo inventando nodos relaciones etc sobre un texto 
+# que le proporcionamos en pdf (de temática LLMs)
 import os
 from dotenv import load_dotenv
 load_dotenv()
@@ -18,7 +20,7 @@ neo4j_driver.verify_connectivity()
 llm = OpenAILLM(
     model_name="gpt-4o",
     model_params={
-        "temperature": 0,
+        "temperature": 0, #0 not creative - 1 super creative
         "response_format": {"type": "json_object"},
     }
 )
